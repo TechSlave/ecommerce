@@ -6,7 +6,7 @@ import javax.persistence.PersistenceContext;
 import com.techslave.ecommerce.models.Book;
 
 public class BookDAO {
-	@PersistenceContext(unitName="ecommerce-dev")
+	@PersistenceContext
 	private EntityManager manager;
 	
 	public void save(Book product) {
