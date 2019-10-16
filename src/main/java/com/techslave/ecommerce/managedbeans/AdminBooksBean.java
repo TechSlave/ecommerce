@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 
 import com.techslave.ecommerce.daos.BookDAO;
+import com.techslave.ecommerce.models.Author;
 import com.techslave.ecommerce.models.Book;
 
 
@@ -16,7 +17,7 @@ import com.techslave.ecommerce.models.Book;
 public class AdminBooksBean {
 	
 	private List<Integer> selectedAuthorsIds = new ArrayList<>();
-
+	private List<Author> authors = new ArrayList<Author>();
 	private Book product = new Book();
 	
 	@Inject
@@ -25,7 +26,7 @@ public class AdminBooksBean {
 	private void populateBookAuthor() {
 		selectedAuthorsIds.stream().map( (id) -> { 
 			return new Author(id);
-			}).forEach(product _ add);
+			}).forEach(product :: add);
 		}
 	
 	
@@ -39,6 +40,9 @@ public class AdminBooksBean {
 		}
 	public List<Integer> getSelectedAuthorsIds() {
 		return selectedAuthorsIds;
+	}
+	public List<Author> getAuthors(){
+		return authors;
 	}
 	
 	public void setSelectedAuthorsIds(List<Integer> selectedAuthorsIds) {
