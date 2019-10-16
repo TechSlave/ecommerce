@@ -1,5 +1,6 @@
 <html xmlns:h="http://java.sun.com/jsf/html"
-xmlns:jsf="http://xmlns.jcp.org/jsf">
+xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://java.sun.com/jsf/core">
 <h:body>
 	<h:form acceptcharset="utf-8">
 		<div>
@@ -21,5 +22,14 @@ xmlns:jsf="http://xmlns.jcp.org/jsf">
 		</div>
 		<h:commandButton value=" Gravar" action="#{adminBooksBean.save}"/>
 	</h:form>
+	<div>
+		<h:outputLabel>Autores</h:outputLabel>
+		<h:selectManyListbox 
+			value="#{adminBooksBean.selectedAuthorsIds}">
+				<f:selectItems value="#{adminBooksBean.authors}"
+					var="author"
+					itemLabel="#{author.name}" itemValue="#{author.id}"/>
+			</h:selectManyListbox>
+	</div>
 </h:body>
 </html>
