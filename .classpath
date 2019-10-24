@@ -46,5 +46,14 @@
 			<attribute name="maven.scope" value="provided"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/itamar/.m2/repository/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final.jar" sourcepath="/home/itamar/.m2/repository/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.hibernate"/>
+			<attribute name="maven.artifactId" value="hibernate-core"/>
+			<attribute name="maven.version" value="5.3.10.Final"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
